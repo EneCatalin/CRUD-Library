@@ -1,0 +1,23 @@
+{
+  "name": "CRUD-Library",
+  "version": "1.0.0",
+  "description": "Just a small CRUD library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EneCatalin/CRUD-Library.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EneCatalin/CRUD-Library/issues"
+  },
+  "homepage": "https://github.com/EneCatalin/CRUD-Library#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
