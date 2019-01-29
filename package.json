@@ -2,10 +2,13 @@
   "name": "CRUD-Library",
   "version": "1.0.0",
   "description": "Just a small CRUD library",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "client-install": "cd client && npm install",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/EneCatalin/CRUD-Library.git"
@@ -16,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/EneCatalin/CRUD-Library/issues"
   },
-  "homepage": "https://github.com/EneCatalin/CRUD-Library#readme",
+
   "devDependencies": {
     "nodemon": "^1.18.9"
   }
