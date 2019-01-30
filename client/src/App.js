@@ -18,11 +18,10 @@ class App extends Component {
     this.setState({ [event.target.name]: event.target.value });
   }
 
+  //should probably use this to send the
+  //create event to the database
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.author_name
-    +' '+this.state.book_description+' '+this.state.book_title+
-    ' '+this.state.isbn+''+this.state.year_published);
-    console.log(this.state.year_published);
+    //
     event.preventDefault();
   }
 
@@ -64,7 +63,7 @@ class App extends Component {
       </div>
     </div>
   </div>
-  <button className="btn waves-effect waves-light col s12" type="submit" value="submit" name="action">Submit
+  <button className="btn waves-effect waves-light col s12" type="submit" value="submit" name="action">Add Book
   </button>
   </form>
   </div> 
