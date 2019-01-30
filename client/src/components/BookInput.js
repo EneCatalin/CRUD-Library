@@ -23,6 +23,7 @@ class BookInput extends Component {
   //create event to the database
   handleSubmit(event) {
     //
+    console.log(this.state.year_published);
     event.preventDefault();
   }
 
