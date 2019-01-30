@@ -19,7 +19,10 @@ class App extends Component {
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.author_name);
+    alert('A name was submitted: ' + this.state.author_name
+    +' '+this.state.book_description+' '+this.state.book_title+
+    ' '+this.state.isbn+''+this.state.year_published);
+    console.log(this.state.year_published);
     event.preventDefault();
   }
 
@@ -31,35 +34,35 @@ class App extends Component {
       <div className="row">
         <div className="input-field col s6">
           <input id="book_title" type="text" value={this.state.book_title} onChange={this.handleChange} name="book_title" className="validate"/>
-          <label for="book_title">Book Title</label>
+          <label htmlFor="book_title">Book Title</label>
         </div>
         <div className="input-field col s6">
           <input id="author_name" type="text" value={this.state.author_name} onChange={this.handleChange} className="validate" name="author_name"/>
-          <label for="author_name">Author Name</label>
+          <label htmlFor="author_name">Author Name</label>
         </div>
       </div>
       <div className="row">
       <div className="input-field col s6">
           <input id="isbn" type="text" value={this.state.isbn} 
           onChange={this.handleChange} className="validate" name="isbn"/>
-          <label for="isbn">ISBN</label>
+          <label htmlFor="isbn">ISBN</label>
         </div>
-        <dov className ="input-field col s6">
+        <div className ="input-field col s6">
           <input id="publication_year" type="number" value={this.state.year_published} 
           onChange={this.handleChange} className="validate" name="year_published"/>
-          <label for="publication_year">Year Pulbished</label>
-        </dov>
+          <label htmlFor="publication_year">Year Pulbished</label>
+        </div>
       </div>
       <div className="row">
-    <form className="col s12">
+    <div className="col s12">
       <div className="row">
         <div className="input-field col s12">
           <textarea id="textarea1" value={this.state.book_description}
           onChange={this.handleChange} className="materialize-textarea" name="book_description"></textarea>
-          <label for="textarea1">Book Description</label>
+          <label htmlFor="textarea1">Book Description</label>
         </div>
       </div>
-    </form>
+    </div>
   </div>
   <button className="btn waves-effect waves-light col s12" type="submit" value="submit" name="action">Submit
   </button>
