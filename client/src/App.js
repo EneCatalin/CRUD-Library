@@ -3,18 +3,18 @@ import React, { Component } from 'react';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = {author_name: ''};
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({author_name: event.target.value.toUpperCase()});
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
+    alert('A name was submitted: ' + this.state.author_name);
     event.preventDefault();
   }
 
@@ -29,7 +29,7 @@ class App extends Component {
           <label for="book_title">Book Title</label>
         </div>
         <div className="input-field col s6">
-          <input id="author_name" type="text" value={this.state.value} onChange={this.handleChange} className="validate"/>
+          <input id="author_name" type="text" value={this.state.author_name} onChange={this.handleChange} className="validate"/>
           <label for="author_name">Author Name</label>
         </div>
       </div>
