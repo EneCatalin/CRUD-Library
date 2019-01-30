@@ -1,18 +1,35 @@
 import React, { Component } from 'react';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    alert('A name was submitted: ' + this.state.value);
+    event.preventDefault();
+  }
+
   render() {
     return (
-      <div className="App">
+<div className="App">
   <div className="row">
-    <form className="col s12">
+    <form className="col s12" onSubmit={this.handleSubmit}>
       <div className="row">
         <div className="input-field col s6">
           <input id="book_title" type="text" className="validate"/>
           <label for="book_title">Book Title</label>
         </div>
         <div className="input-field col s6">
-          <input id="author_name" type="text" className="validate"/>
+          <input id="author_name" type="text" value={this.state.value} onChange={this.handleChange} className="validate"/>
           <label for="author_name">Author Name</label>
         </div>
       </div>
